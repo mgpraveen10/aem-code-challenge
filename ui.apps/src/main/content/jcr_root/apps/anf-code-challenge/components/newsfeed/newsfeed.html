@@ -1,0 +1,16 @@
+<div>
+  <sly data-sly-use.news="${'com.anf.core.models.News'}"></sly>
+
+  <h1 data-sly-test="${!news.message}">Add news component</h1>
+
+  <div data-sly-list="${news.message}">
+    <h1 style="font-weight: bold">${item.author}</h1>
+    <h2>${item.title}</h2>
+    <p>${item.description}</p>
+
+    <a href="${item.url}">
+      <img src="${item.urlImage}" />
+      <h6>${item.content}</h6>
+    </a>
+  </div>
+</div>
