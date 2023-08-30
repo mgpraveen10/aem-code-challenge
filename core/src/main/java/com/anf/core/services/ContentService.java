@@ -1,5 +1,8 @@
 package com.anf.core.services;
 
+import org.json.JSONObject;
+
 public interface ContentService {
-	void commitUserDetails();
+	String commitUserDetails(JSONObject userdetails);
+	boolean validateUserAge(int age);
 }
